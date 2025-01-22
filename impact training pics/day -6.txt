@@ -1,0 +1,148 @@
+Error vs. Exception Handling
+Error Handling:
+
+Definition: Errors refer to serious problems that a program cannot reasonably be expected to catch. These are typically issues that arise from the environment in which the program is running, such as syntax errors, memory errors, or system-related issues.
+Examples:
+Syntax Errors: Mistakes in the code that violate the language rules (e.g., missing colons, unmatched parentheses).
+Memory Errors: Problems related to the allocation of memory (e.g., running out of memory).
+Handling: Errors are usually not handled in the traditional sense because they indicate a flaw in the program’s logic or environment. When an error occurs, the program typically crashes.
+Exception Handling:
+
+Definition: Exceptions are events that occur during the execution of a program that disrupt the normal flow of instructions. Exceptions can be anticipated and handled gracefully.
+Examples:
+Runtime Exceptions: Issues that arise during the execution of a program, such as division by zero, file not found, or invalid input.
+Handling: Python provides a robust mechanism for handling exceptions using try, except, finally, and else blocks. This allows developers to write code that can respond to and recover from errors.
+Exception Handling in Python
+In Python, you can handle exceptions using the following syntax:
+
+python
+
+Verify
+
+Open In Editor
+Edit
+Copy code
+try:
+    # Code that may raise an exception
+except SomeExceptionType:
+    # Code that runs if the specified exception occurs
+except AnotherExceptionType:
+    # Code that runs if another specified exception occurs
+else:
+    # Code that runs if no exception occurs
+finally:
+    # Code that runs no matter what (optional)
+Types of Exceptions in Python
+Python has a rich set of built-in exceptions. Here are some common types:
+
+StandardError (Base class for all built-in exceptions): This is a base class for all built-in exceptions except for system-exiting exceptions.
+
+ArithmeticError: Base class for all errors that occur for numeric calculations.
+
+ZeroDivisionError: Raised when dividing by zero.
+OverflowError: Raised when a calculation exceeds the maximum limit for a numeric type.
+FloatingPointError: Raised when a floating point operation fails.
+LookupError: Base class for errors raised when a lookup on a collection fails.
+
+IndexError: Raised when trying to access an index that is out of range.
+KeyError: Raised when trying to access a dictionary with a key that does not exist.
+TypeError: Raised when an operation or function is applied to an object of inappropriate type.
+
+ValueError: Raised when a function receives an argument of the right type but inappropriate value (e.g., trying to convert a non-numeric string to an integer).
+
+IOError: Raised when an input/output operation fails, such as when trying to open a file that does not exist.
+
+FileNotFoundError: A subclass of IOError, raised when trying to open a file that does not exist.
+
+NameError: Raised when a local or global name is not found.
+
+AttributeError: Raised when an invalid attribute reference is made.
+
+ImportError: Raised when an import statement fails to find the module definition.
+
+KeyboardInterrupt: Raised when the user interrupts program execution, typically by pressing Ctrl+C.
+
+SystemExit: Raised by the sys.exit() function to exit the program.
+
+Custom Exceptions
+You can also define your own exceptions by creating a new class that inherits from the built-in Exception class:
+
+python
+
+Verify
+
+Open In Editor
+Edit
+Copy code
+class MyCustomError(Exception):
+    pass
+
+try:
+    raise MyCustomError("This is a custom error message.")
+except MyCustomError as e:
+    print(e)
+
+Comprehensive List of Built-in Exceptions in Python
+BaseException: The base class for all exceptions in Python. It is not usually used directly by programmers.
+
+Exception: The base class for all built-in exceptions except for system-exiting exceptions.
+
+ArithmeticError: Base class for errors that occur for numeric calculations.
+
+ZeroDivisionError: Raised when dividing by zero.
+OverflowError: Raised when a calculation exceeds the maximum limit for a numeric type.
+FloatingPointError: Raised when a floating point operation fails.
+AssertionError: Raised when an assert statement fails.
+
+AttributeError: Raised when an invalid attribute reference is made.
+
+EOFError: Raised when the input() function hits an end-of-file condition (EOF) without reading any data.
+
+ImportError: Raised when an import statement fails to find the module definition.
+
+ModuleNotFoundError: A subclass of ImportError raised when a module cannot be found.
+IndexError: Raised when trying to access an index that is out of range for a list or tuple.
+
+KeyError: Raised when trying to access a dictionary with a key that does not exist.
+
+KeyboardInterrupt: Raised when the user interrupts program execution, typically by pressing Ctrl+C.
+
+MemoryError: Raised when an operation runs out of memory.
+
+NameError: Raised when a local or global name is not found.
+
+OSError: Base class for operating system-related errors.
+
+FileNotFoundError: Raised when trying to open a file that does not exist.
+IsADirectoryError: Raised when a file operation (like open) is requested on a directory.
+PermissionError: Raised when trying to open a file in write mode without the necessary permissions.
+ReferenceError: Raised when a weak reference proxy is used to access a garbage collected referent.
+
+RuntimeError: Raised when an error is detected that doesn’t fall in any of the other categories.
+
+RecursionError: Raised when the maximum recursion depth is exceeded.
+StopIteration: Raised by an iterator's __next__() method to signal that there are no further items.
+
+StopAsyncIteration: Raised by an asynchronous iterator's __anext__() method to signal that there are no further items.
+
+SyntaxError: Raised when the parser encounters a syntax error.
+
+IndentationError: A subclass of SyntaxError raised when there is an incorrect indentation.
+TabError: Raised when inconsistent use of tabs and spaces in indentation is detected.
+TypeError: Raised when an operation or function is applied to an object of inappropriate type.
+
+ValueError: Raised when a function receives an argument of the right type but inappropriate value.
+
+UnicodeError: Raised when a Unicode-related encoding or decoding error occurs.
+
+UnicodeEncodeError: Raised when a Unicode-related error occurs during encoding.
+UnicodeDecodeError: Raised when a Unicode-related error occurs during decoding.
+UnicodeTranslateError: Raised when a Unicode-related error occurs during translation.
+Warning: Base class for warning categories.
+
+DeprecationWarning: Raised when a feature is deprecated.
+SyntaxWarning: Raised for suspicious syntax.
+RuntimeWarning: Raised for issues that do not necessarily indicate an error but may indicate a problem.
+User Warning: Base class for warnings generated by user code.
+
+FutureWarning: Raised when a feature is going to change in the future.

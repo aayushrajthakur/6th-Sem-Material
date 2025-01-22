@@ -1,0 +1,1 @@
+Complete all the function of String.

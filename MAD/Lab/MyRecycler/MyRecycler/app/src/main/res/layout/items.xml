@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/myimage"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"/>
+    <TextView
+        android:id="@+id/mynameview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/myimage"
+        android:layout_marginTop="20dp"
+        android:text="Name Of Kutta"/>
+    <TextView
+        android:id="@+id/mydescview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/myimage"
+        android:layout_below="@id/mynameview"
+        android:text="Description of kutta"/>
+
+
+</RelativeLayout>

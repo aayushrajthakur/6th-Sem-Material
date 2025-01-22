@@ -1,0 +1,50 @@
+Derivation
+A derivation is basically a sequence of production rules, in order to get the input string. During parsing, we take two decisions for some sentential form of input:
+-> Deciding the non-terminal which is to be replaced.
+-> Deciding the production rule, by which, the non-terminal will be replaced.
+
+To decide which non-terminal to be replaced with production rule, we can have two options.
+
+Left-most Derivation
+If the sentential form of an input is scanned and replaced from left to right, it is called left-most derivation. The sentential form derived by the left-most derivation is called the left-sentential form.
+
+Right-most Derivation
+If we scan and replace the input with production rules, from right to left, it is known as right-most derivation. The sentential form derived from the right-most derivation is called the right-sentential form.
+
+Production rules:
+
+E → E + E
+E → E * E
+E → id 
+Input string: id + id * id
+
+
+The left-most derivation is:
+E → E * E
+E → E + E * E
+E → id + E * E
+E → id + id * E
+E → id + id * id
+Notice that the left-most side non-terminal is always processed first.
+
+
+The right-most derivation is:
+E → E + E
+E → E + E * E
+E → E + E * id
+E → E + id * id
+E → id + id * id
+
+Parse Tree
+A parse tree is a graphical depiction of a derivation. It is convenient to see how strings are derived from the start symbol. The start symbol of the derivation becomes the root of the parse tree. Let us see this by an example from the last topic.
+
+
+We take the left-most derivation of a + b * c
+
+The left-most derivation is:
+
+E → E * E
+E → E + E * E
+E → id + E * E
+E → id + id * E
+E → id + id * id

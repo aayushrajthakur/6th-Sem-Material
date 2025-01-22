@@ -1,0 +1,178 @@
+1. The Kingdom's Road Network
+Story: The kingdom of Algoria has several cities connected by roads. The king wants to know if his soldiers can travel from the capital city to any other city in the kingdom. He also wants to know the shortest path to reach any city from the capital.
+
+Problem: Write a program to:
+
+Check if the graph of cities (nodes) and roads (edges) is connected.
+Find the shortest path from the capital city to all other cities using Dijkstra’s algorithm.
+Input:
+
+Number of cities n and roads m.
+Each road is represented by three values: u, v, w (road connects city u to city v with weight w).
+Output:
+
+Whether all cities are reachable from the capital.
+The shortest distance from the capital to each city.
+......................................................................................
+2. Rescue Mission
+Story: A group of explorers is trapped in a forest, and they are trying to reach a safe zone. The forest is represented as a grid, with 1 as passable land and 0 as impassable terrain. The explorers can move up, down, left, or right. Find the shortest path to the safe zone.
+
+Problem: Use Breadth-First Search (BFS) to find the shortest path.
+
+Input:
+
+A 2D grid of size n x m where 1 is passable and 0 is impassable.
+The start and destination coordinates.
+Output:
+
+The length of the shortest path.
+The path itself, if possible.
+............................................................................................
+3. Treasure Hunt
+Story: You are on an island searching for a hidden treasure. The island is represented as an undirected graph. You are given the map of the island (graph) and a list of caves with hidden traps. Your task is to find the safest route to the treasure while avoiding traps.
+
+Problem: Write a program to:
+
+Find all paths from the starting point to the treasure location.
+Exclude paths that pass through caves with traps.
+Return the shortest safe path.
+Input:
+
+Number of nodes n and edges m.
+List of edges representing the graph.
+A list of nodes containing traps.
+The starting and treasure nodes.
+Output:
+
+The shortest safe path or "No safe path exists."
+..........................................................................................
+4. Power Supply in the City
+Story: A city has n power plants and m houses. Each power plant can provide electricity to a certain number of houses within its range. Your task is to distribute electricity so that every house receives power, if possible.
+
+Problem: Model the power plants and houses as a bipartite graph and use a maximum bipartite matching algorithm to determine the optimal power distribution.
+
+Input:
+
+Number of power plants and houses.
+A list of connections where each power plant can supply power to certain houses.
+Output:
+
+Whether all houses can be supplied with electricity.
+The distribution of power plants to houses.
+...............................................................................................
+
+5. Escape the Maze
+Story: You are trapped in a maze with a time bomb. Each cell in the maze has a countdown, and you can only step into a cell before its countdown hits zero. The goal is to escape the maze before the bomb explodes.
+
+Problem: Find the shortest path from the starting point to the exit, considering the countdown for each cell.
+
+Input:
+
+A 2D grid with cell values representing countdown timers.
+The starting and exit coordinates.
+Output:
+
+The minimum time required to escape the maze.
+Whether it’s possible to escape.
+..................................................................................................
+6. Social Network Analysis
+Story: In a social network, you are analyzing the relationships between users. Each user is a node, and their friendship is an edge. You need to identify:
+
+The most connected user (node with the highest degree).
+Whether the network is strongly connected.
+The shortest chain of introductions needed to connect any two users.
+Problem: Use graph traversal algorithms (DFS, BFS, or Floyd-Warshall) to answer these questions.
+
+Input:
+
+Number of users n and relationships m.
+A list of edges representing friendships.
+Output:
+
+The most connected user.
+Whether the network is strongly connected.
+The shortest path between two specified users.
+...............................................................................................
+7. The Galactic Trade Federation
+Story:
+The Galactic Trade Federation is a network of planets connected by interstellar trade routes. Each route has a cost and a capacity for transporting goods. The federation is facing two challenges:
+
+A rival group is planning to block some routes, and you need to find alternate paths for trade.
+A planet urgently needs a large quantity of resources, and you must determine the maximum amount that can be sent through the network.
+Problem:
+
+Identify all critical edges (bridges) in the graph that, if removed, would disconnect the network.
+Implement the Ford-Fulkerson algorithm to calculate the maximum flow of goods from a source planet to a destination planet.
+Input:
+
+Number of planets n and trade routes m.
+Each route has three values: u, v, c (connects planet u to planet v with capacity c).
+Source and destination planets.
+Output:
+
+A list of critical edges.
+The maximum flow from source to destination.
+......................................................................
+8. The Secret Spy Network
+Story:
+You are the chief of an international spy organization. Your spies operate in different cities, and their communications are modeled as a directed graph where nodes are cities, and edges are encrypted communication links.
+
+A spy has been captured, disrupting communication. You need to quickly reroute the network to maintain contact with all cities.
+Your organization wants to minimize the cost of maintaining communication across all cities.
+Problem:
+
+Use a DFS to check if the network remains strongly connected after removing a specific node (captured spy).
+Use Kruskal’s algorithm to find the minimum cost of a spanning tree that keeps all cities connected.
+Input:
+
+Number of cities n and communication links m.
+Each link has a source, destination, and cost.
+ID of the captured spy (node to remove).
+Output:
+
+Whether the network remains strongly connected after removing the node.
+The cost of the minimum spanning tree.
+...................................................................................
+9. The Cursed Forest Adventure
+Story:
+You are an adventurer trapped in a cursed forest. The forest is represented as a weighted undirected graph, where nodes are clearings and edges are paths with traps. Some traps double their effect over time.
+Your goal is to:
+
+Escape the forest as quickly as possible.
+Collect treasures hidden in specific clearings along the way without exceeding a total trap damage threshold.
+Problem:
+
+Use Dijkstra’s algorithm to find the shortest escape route.
+Modify the algorithm to also calculate the maximum treasure collected without exceeding the damage threshold.
+Input:
+
+Number of clearings n and paths m.
+Each path has u, v, w (clearing u to v with weight w, where w is the trap damage).
+A list of clearings with treasures and their values.
+Starting and exit points.
+Maximum trap damage allowed.
+Output:
+
+The shortest escape route and its damage.
+The route that maximizes treasure collection within the damage threshold.
+.....................................................................................
+10. The Enchanted River Network
+Story:
+A magical kingdom has rivers connecting various villages. Each river has a flow rate, but excessive usage causes it to dry up (flow becomes zero). The queen needs to:
+
+Determine if water can be distributed to all villages.
+Ensure no river is overused while maximizing the flow of water across the network.
+Problem:
+
+Use a maximum flow algorithm (e.g., Edmonds-Karp) to calculate the maximum water that can flow through the network.
+Simulate a scenario where overused rivers (with flow exceeding half their capacity) are removed, and check if the network remains connected.
+Input:
+
+Number of villages n and rivers m.
+Each river has u, v, c (village u to v with capacity c).
+Source and sink villages.
+Output:
+
+Maximum water flow.
+Whether the network remains connected after removing overused rivers.
+.................................................................................
