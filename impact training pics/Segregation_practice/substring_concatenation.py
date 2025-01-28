@@ -2,6 +2,7 @@ import itertools as it
 def concatenate_substring(words):
     li = list(it.permutations(words))
     permutated_list =  [list(p) for p in li]
+    print("Test : ",permutated_list)
     permutated_list = [li for li in permutated_list]
     substring = [''.join(letter) for letter in permutated_list]
     return substring
