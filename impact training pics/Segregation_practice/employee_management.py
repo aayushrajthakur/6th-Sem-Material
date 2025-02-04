@@ -1,12 +1,12 @@
 class Employee:
-    def _init_(self, eno, ename, edesig, esalary):
+    def __init__(self, eno, ename, edesig, esalary):
         self.eno = eno
         self.ename = ename
         self.edesig = edesig
         self.esalary = esalary
         
 class EmployeeManagement:
-    def _init_(self):
+    def __init__(self):
         self.employees = {}
 
     def add_employee(self):
