@@ -1,3 +1,8 @@
+#Pattern building
+# A 
+# b C
+# d E f
+# G h I j
 
 n = int(input())
 a = 65
