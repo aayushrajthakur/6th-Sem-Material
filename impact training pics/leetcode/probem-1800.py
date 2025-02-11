@@ -1,4 +1,5 @@
 def maximumSubArray(nums):
+    stack = []
     size = len(nums)
     if size == 0:
         return 0
