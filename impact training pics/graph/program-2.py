@@ -7,20 +7,19 @@ def bfs(grid, start, destination):
     queue = deque([start])
     visited = set()
     visited.add(start)
-    parent = {start: None}  # To reconstruct the path
+    parent = {start: None} 
 
-    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]  # Right, Down, Left, Up
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)] 
 
     while queue:
         current = queue.popleft()
 
-        # Check if we reached the destination
         if current == destination:
             path = []
             while current is not None:
                 path.append(current)
                 current = parent[current]
-            return len(path) - 1, path[::-1]  # Return length and path
+            return len(path) - 1, path[::-1] 
 
         for direction in directions:
             neighbor = (current[0] + direction[0], current[1] + direction[1])
